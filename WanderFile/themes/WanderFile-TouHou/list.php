@@ -1,10 +1,6 @@
-<?php
-/**
- * ProjectName: WanderFileManager.
- * Author: SaigyoujiYuyuko
- * QQ: 3558168775
- * Date: 2019/3/8
- * Time: 22:36
- *
- * Copyright © 2019 SaigyoujiYuyuko. All rights reserved.
- */
+<tr>
+    <td><i class="fa {ICON_TYPE}"></i> {NAME}</td>
+    <td>{TIME}</td>
+    <td>{TYPE}</td>
+    <td>[SIZE]</td>
+</tr>
