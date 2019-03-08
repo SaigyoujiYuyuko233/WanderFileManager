@@ -12,6 +12,11 @@
 define("START_TIME",microtime(true));
 define("ROOT_DIR", str_replace("\\", "/", __DIR__));
 
+require_once ROOT_DIR . "/WanderFile/loader.php";
+require_once ROOT_DIR . "/WanderFile/config.php";
 
-require_once "WanderFile/loader.php";
-require_once "WanderFile/config.php";
+define("CONFIG",$config);
+
+// 启动
+$loader = new loader();
+$loader->start();

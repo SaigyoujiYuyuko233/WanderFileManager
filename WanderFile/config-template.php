@@ -11,11 +11,15 @@
 
 return array(
 
+    // 系统版本 请勿修改
+    'version' => '1.0.0',
+    'publish_mark' => 00000,
+
     // 网站title
     'sitename' => '流浪的文件管理器',
 
     // 标题内容
-    'subjectname' => "流浪文件 ~ Perfect Wandering FileManager",
+    'subjectname' => "<i class=\"fa fa-hdd-o\"></i> 流浪文件 ~ Perfect Wandering FileManager",
 
     // 模板名称
     'template' => 'WanderFile-TouHou',
