@@ -12,7 +12,7 @@
             </table>
         </div>
 
-        <div class="panel-footer mdui-valign" style="height: 30px; padding: 0px 0px 0px 6px;">
+        <div class="panel-footer mdui-valign" style="height: 30px; padding: 0px 0px 2px 6px; overflow-y: auto;">
             <div style="width: 100%; text-align: center;">
 
                 <p style="margin: 0; display: inline-block;" class="mdui-float-left">

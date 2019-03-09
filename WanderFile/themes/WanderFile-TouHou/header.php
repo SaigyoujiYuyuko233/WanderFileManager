@@ -24,7 +24,6 @@
         <link rel="icon" href="/public/themes/<?php echo CONFIG['theme']?>/favicon.ico">
 
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-        <script src="/public/themes/<?php echo CONFIG['theme']?>/js/mdui.js"></script>
 
         <style>
             body{
