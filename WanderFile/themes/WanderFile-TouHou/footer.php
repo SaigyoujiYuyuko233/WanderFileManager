@@ -19,7 +19,7 @@
                     Copyright © 2019 <a href="https://github.com/SaigyoujiYuyuko233/blog">SaigyoujiyYuyuko</a>.
                 </p>
 
-                <p style="margin: 0; display: inline-block;">
+                <p style="margin: 0; display: inline-block;" class="">
                     <i class="fa fa-code-fork"></i> <?php echo CONFIG['version']?> |
                     <i class="fa fa-clock-o"></i> <?php echo round(microtime(true) - START_TIME,4)?>
                 </p>
@@ -32,4 +32,5 @@
         </div>
 
     </div>
+</div>
 </html>
