@@ -20,8 +20,52 @@ class WanderFile{
      */
     public function viewAction($path){
         $data = $this->parsingData($path);
-        $this->loadThemes($path,$data);
+        $path_bar = $this->parsingPath($path);
+        $this->loadThemes($path,$data,$path_bar);
     }
+
+
+    /**
+     * 解析上方的导航栏
+     *
+     * @param $path
+     * @return String
+     */
+
+    protected function parsingPath($path){
+
+        // path-bar
+        $path_bar = '<p style="display: inline-block; margin: 0;"><a href="/?action=view&path=/">根目录</a> > </p>';
+
+        // 读取模板
+        $tmp = file_get_contents(ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/path.php");
+
+        // 解析路径
+        $path_arr = explode("/",$path);
+
+        // start with 1? i don't now why that i need set 2 to make this work
+        for ($i = 2; $i < count($path_arr); $i++){
+
+            // 获得前目录
+            $path_ago = substr(explode($path_arr[$i],$path)[0],0,strlen(explode($path_arr[$i],$path)[0]) - 1);
+
+            // 获得目录名称
+            $path_name_ago = explode("/",$path_ago)[ count(explode("/",$path_ago)) - 1 ];
+
+            // 合成
+            $path_bar_parts = str_replace("{PATH}",$path_ago,$tmp);
+            $path_bar_parts = str_replace("{NAME}",$path_name_ago,$path_bar_parts);
+
+
+            $path_bar = $path_bar . $path_bar_parts;
+        }
+
+        // 顺便加上当前目录
+        $now_path =  " <p style=\"display: inline-block; margin: 0;\"><a href=\"/?action=view&path=". $path ."\">" . $path_arr[count($path_arr) - 1] . "</a></p>";
+
+        return $path_bar . $now_path;
+    }
+
 
     protected function parsingData($path){
 
@@ -123,11 +167,21 @@ class WanderFile{
     }
 
 
-    protected function loadThemes($path,$data){
+    protected function loadThemes($path,$data,$path_bar){
         // 加载模板
         include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/header.php";
         include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/box.php";
+
+        // 这是路径栏的输出
+        echo $path_bar;
+
+        // 加载表格
+        include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/path-bar.php";
+
+
+        // 这是列表的输出
         echo $data;
+
         include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/footer.php";
     }
 
