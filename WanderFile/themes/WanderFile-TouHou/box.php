@@ -1,6 +1,6 @@
 <body background="/public/themes/<?php echo CONFIG['theme']?>/images/bg<?php echo rand(1,2) ?>.jpg" style="background-size: 100%100%;">
 
-    <div class="panel" style="width: 60%; margin-top: 6%; margin-left: 20%; border-color: #F06292; border-radius: 0px; opacity: 0.85;">
+    <div class="panel" style="width: 60%; margin-top: 5%; margin-left: 20%; border-color: #F06292; border-radius: 0px; opacity: 0.85; margin-bottom: 60px;">
         <div class="panel-heading mdui-color-pink-400" style="border-radius: 0px;">
             <h3 class="panel-title">
                 <?php echo CONFIG['subjectname']?>
