@@ -32,8 +32,12 @@ class loader{
             return true;
         }
 
-        return true;
+        if ($action == 'download'){
+            $WanderFile->downloadFile($path);
+            return true;
+        }
 
+        return false;
     }
 
 }

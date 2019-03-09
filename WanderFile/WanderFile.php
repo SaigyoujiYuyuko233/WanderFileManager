@@ -153,6 +153,7 @@ class WanderFile{
                 $temp_data = str_replace("{TIME}",date("Y/m/d G:i:s",filemtime($file_path)),$temp_data);
                 $temp_data = str_replace("{SIZE}",$file_size_string,$temp_data);
                 $temp_data = str_replace("{TYPE}",strtoupper($file_extension) . " 文件",$temp_data);
+                $temp_data = str_replace("{URL}","/?action=download&path=" . $path . "/" . $file_data[$i] ,$temp_data);
 
                 $file_list = $file_list . $temp_data;
             }
@@ -183,6 +184,54 @@ class WanderFile{
         echo $data;
 
         include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/footer.php";
+    }
+
+
+    public function downloadFile($path){
+        // 获取根目录
+        $root_path = CONFIG['files']['root_path'];
+
+        // 文件的路径
+        $file_path = $root_path . $path;
+
+        // 判断是否有这个文件
+        if (is_file($file_path) == false){
+            include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/error/404.php";
+            return false;
+        }
+
+        // 判断是否是目录
+        if (is_dir($file_path) == true){
+            include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/error/notFile.php";
+            return false;
+        }
+
+        // 设置下载头
+        header('Cache-control: private');// 发送 headers
+        header('Content-Type: application/octet-stream');
+        header('Content-Length: '.filesize($file_path));
+        header('Content-Disposition: filename='.basename($file_path));
+
+        // 清除缓存
+        ob_clean();
+        flush();
+
+        // 设置php运行时间
+        ini_set("max_execution_time", "600");
+
+        // 开始限速下载
+
+        $file = fopen($file_path, "r");
+
+        while(!feof($file)){
+            print(fread($file,CONFIG['files']['download_speed']));
+            flush();
+            sleep(1);
+        }
+
+        fclose($file);
+
+        return true;
     }
 
 }
