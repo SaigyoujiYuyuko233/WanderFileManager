@@ -19,7 +19,7 @@ WanderFile 的安装非常简单
 
 首先下载 WanderFile 的源码
 ```bash
-wget http://resources.hakugyokukon.cn:8000/?action=download&path=/WanderFileManager.zip
+wget https://github.com/SaigyoujiYuyuko233/WanderFileManager/releases/download/Releases-V1.0.0/WanderFileManager.zip
 ```
 
 解压文件
