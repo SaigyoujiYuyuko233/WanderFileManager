@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08fd02bb-9ce6-43b5-8240-55de7a233fb5" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/box.php" beforeDir="false" afterPath="$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/box.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/footer.php" afterDir="false" />
-    </list>
+    <list default="true" id="08fd02bb-9ce6-43b5-8240-55de7a233fb5" name="默认更改列表" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,7 @@
     <session id="1235627390">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.opened" value="2" />
@@ -321,7 +317,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/PHP application/WanderFileManager/WanderFile/themes/WanderFile-TouHou/WanderFile.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/php71/php-cgi.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PowerPterodactylAPI" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -364,16 +360,15 @@
       <updated>1552044106465</updated>
       <workItem from="1552044107561" duration="693000" />
       <workItem from="1552044819302" duration="33655000" />
-      <workItem from="1552125722302" duration="598000" />
+      <workItem from="1552125722302" duration="1230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34946000" />
+    <option name="totallyTimeSpent" value="35578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,6 +493,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/path-bar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/box.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -505,13 +507,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WanderFile/themes/WanderFile-TouHou/path-bar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
