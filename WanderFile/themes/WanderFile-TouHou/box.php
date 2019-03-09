@@ -7,7 +7,7 @@
                 <small style="color: rgba(234,234,234,0.94);">&nbsp;&nbsp;<?php echo CONFIG['description']?></small>
             </h3>
         </div>
-        <div class="panel-body" style="padding: 4px 0px 10px 4px;">
+        <div class="panel-body" style="padding: 4px 0px 10px 4px; width: 100%; overflow-y: auto;">
 
-            <table class="table" style="margin: 0;">
-                <tbody>
+            <div class="url" style="padding-left: 8px; padding-top: 4px; width: 99.7%; padding-bottom: 6px; background-color: rgba(233,241,234,0.94);">
+                <i class="fa fa-folder-open"></i>&nbsp;

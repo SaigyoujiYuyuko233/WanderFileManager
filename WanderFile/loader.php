@@ -9,9 +9,16 @@
  * Copyright © 2019 SaigyoujiYuyuko. All rights reserved.
  */
 
+require_once ROOT_DIR . "/WanderFile/WanderFile.php";
+
+use WanderFile\WanderFile;
+
 class loader{
 
     public function start(){
+
+        // 实例化核心
+        $WanderFile = new WanderFile();
 
         // 获取动作
         $action = @$_GET['action'] != null ? $_GET['action'] : 'view';
@@ -21,21 +28,12 @@ class loader{
 
         // 判断动作
         if ($action == 'view'){
-            $this->loadThemes($path);
+            $WanderFile->viewAction($path);
             return true;
         }
 
+        return true;
+
     }
 
-
-    /**
-     * @param $path
-     */
-
-    protected function loadThemes($path){
-        // 加载模板
-        include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/header.php";
-        include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/box.php";
-        include_once ROOT_DIR . "/WanderFile/themes/" . CONFIG['theme'] . "/footer.php";
-    }
 }

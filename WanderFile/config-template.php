@@ -30,8 +30,8 @@ return array(
 
     // 文件设置
     'files' => array(
-        // 文件根目录
-        'root_path' => '/File'
+        // 文件根目录 (完整的根目录)  ex: D:/MyData/WanderFile  注意结尾不要带 '/' 号 不要使用 '\'
+        'root_path' => 'D:/MyData/WanderFile'
     )
 
 );
